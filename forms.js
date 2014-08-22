@@ -1,8 +1,8 @@
 
 function Field (jQueryFormElement)
 {
-	this.field = jQueryFormElement;
-	this.id = this.field.prop("id");
+    this.field = jQueryFormElement;
+    this.id = this.field.prop("id");
     this.name = this.field.prop("name");
     this.value = this.field.prop("value");
     this.type = this.field.prop("type");
