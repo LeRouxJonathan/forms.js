@@ -143,7 +143,8 @@ submit_button.click(function()
     //Now that I know my data is valid, get the data as a serialized string
     var form_data = form.serialize();
     
-    //Perform your desired operations with the data
+    //Or, submit the form by way of our .setMethod() and .setAction()
+    form.submit();
   }
   //However, if Field elements within the Form were invalid, find out what went wrong
   else
