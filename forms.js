@@ -366,20 +366,9 @@ function Field (elementId)
       {
         var selected = this.getSelectedValue();
         
-        
-        if (selected !== null)
+        if (selected !== null && selected !== undefined)
         {
-          for (var i = 0; i < selected.length; i++)
-          {
-            if (string === "")
-            {
-              string = string + this.name+"="+selected[i];
-            }
-            else
-            {
-              string = string + "&" + this.name+"="+selected[i];
-            }
-          }	
+          string = this.name+"="+encodeURIComponent(selected);
         }
         
         //If this select box has no selections made, exclude it from the string entirely
@@ -395,11 +384,11 @@ function Field (elementId)
       {
         if (string === "")
         {
-          string = string + this.name+"="+this.value;
+          string = string + this.name+"="+encodeURIComponent(this.value);
         }
         else
         {
-          string = string + "&" + this.name+"="+this.value;
+          string = string + "&" + this.name+"="+encodeURIComponent(this.value);
         }	
       }
      
