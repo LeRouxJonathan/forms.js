@@ -197,6 +197,20 @@ function Field (elementId)
     	  return false;
     	}
       }
+      
+      //Textareas
+      if (this.type === "textarea")
+      {
+        if (this.value.length > 0 && this.value.toString().trim() !== "")
+        {
+          return true;
+        }
+        else
+        {
+          this.setErrorMessage("No input detected for Field: " + this.name);
+          return false;
+        }
+      }
     	
     	
       //Email
