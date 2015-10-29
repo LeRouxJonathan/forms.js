@@ -258,6 +258,19 @@ function Field (elementId)
         }
       }
       
+      //Password fields
+      if (this.type === "password")
+      {
+        if (this.value.length > 0 && this.value.toString().trim() !== "")
+        {
+          return true;
+        }
+        else
+        {
+          return false;
+        }
+      }
+      
     };//end: isValid()
 
     
